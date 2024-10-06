@@ -164,20 +164,106 @@
 
       </div>
       <div class="contact" id="join">
-        <h2 class="title"> __ Join Us</h2>
-        <div class="contact-main">
-
-          <div class="contact-form">
-            <form action="https://getform.io/f/akkglvka" method="POST >
-              <div class="name"> 
-                <input  class="input name-list" type="text" placeholder="First Name*">
-                <input  class="input name-list" type="text" placeholder="Last Name*">
-              </div>
-              <input id="email" class="input"  type="text" placeholder="Email*">
-              <textarea  id="email" class="input" minlength="100"  placeholder="Your Message*" required></textarea>
-             <button class="w3-btn w3-red w3-round">Send</button>
+    <h2 class="title">Join Us</h2>
+    <div class="contact-main">
+        <div class="contact-form">
+            <form action="https://getform.io/f/akkglvka" method="POST">
+                <div class="form-group">
+                    <label for="first-name">First Name*</label>
+                    <input id="first-name" class="input" type="text" name="first-name" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name*</label>
+                    <input id="last-name" class="input" type="text" name="last-name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input id="email" class="input" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message*</label>
+                    <textarea id="message" class="input" name="message" placeholder="Write your message..." minlength="100" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send</button>
             </form>
-            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .contact {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .contact-main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    .input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    textarea.input {
+        resize: vertical;
+        min-height: 150px;
+    }
+
+    .btn-submit {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-submit:hover {
+        background-color: #0056b3;
+    }
+</style>
+
   
           
           <div class="contact-image">
