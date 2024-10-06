@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,245 +8,349 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>TechAssit</title>
+    <title>TechAssist</title>
+    <style>
+        /* Custom CSS for TechAssist */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .w3-bar {
+            background-color: #282A35;
+        }
+
+        .w3-bar a {
+            color: #fff;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=60') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .about, .service, .testimony, .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-main, .service-main, .testimony-main {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .about-main div, .service-main div, .testimony-main div {
+            flex-basis: 45%;
+            margin: 20px;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card-list {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card-list:hover {
+            transform: scale(1.05);
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-text {
+            padding: 20px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social a {
+            color: #282A35;
+            margin: 0 10px;
+            font-size: 25px;
+        }
+
+        .testimony-main {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .testimony-main div {
+            flex-basis: 30%;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .testimony-image img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .contact-main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-form, .contact-address {
+            flex-basis: 45%;
+            margin: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-submit {
+            background-color: #282A35;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #007bff;
+        }
+
+        .contact-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #282A35;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-content div {
+            margin: 10px;
+            flex-basis: 30%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-main div, .service-main div, .testimony-main div {
+                flex-basis: 100%;
+            }
+
+            .contact-form, .contact-address {
+                flex-basis: 100%;
+            }
+
+            .footer-content div {
+                flex-basis: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div>
-        <!-- Navbar -->
-        <div class="w3-top w3-text-white w3-black">
-            <div class="w3-bar  ">
-              <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-              <a href="#home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-              <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-              <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICE</a>
-              <a href="#testimony" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TESTIMONY</a>
-              <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-            </div>
-          </div>
-  
-          <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-          <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-            <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-            <a href="#service" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICE</a>
-            <a href="#testimony" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TESTIMONY</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-          </div>
+    <!-- Navbar -->
+    <div class="w3-top w3-text-white">
+        <div class="w3-bar w3-padding">
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+            <a href="#testimony" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TESTIMONIALS</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+        </div>
     </div>
+
+    <!-- Hero Section -->
     <section id="home">
         <div class="hero">
-         <div class="hero-text">
-          <h1>Empowering Your Digital Future,<br>
-            One Solution at a Time.</h1>      
-         </div>
-        
+            <div class="hero-text">
+                <h1>Empowering Your Digital Future,<br>One Solution at a Time.</h1>
+            </div>
         </div>
     </section>
-    <main>
-      <div class="about" id="about">
-        <div>
-        <h2 class="title">
-               Get to Know me
-        </h2>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="title">Get to Know Us</h2>
         <div class="about-main">
-          <div>
-
-          </div>
-          <div class="about-text">
-             <h3>I'm Nitesh Kumar <br>Web deveveloper </h3>
-             <p>Crafting Digital Experiences Through Lines of Code – Your Vision, Brought to Life.</p>
-             <div style="margin-top:40px">
-              <span class="w3-text-white social" >
-                <p >Follow Me on Social media</p>
-                <div class="w3-margin-top">
-           
-             <a href=""><i class="fa fa-instagram w3-hover-opacity icons" ></i></a> 
-             <a href="#"><i class="fa fa-snapchat w3-hover-opacity icons"></i></a>  
-             <a href="#"><i class="fa fa-pinterest-p w3-hover-opacity icons" ></i></a>  
-             <a href="#"><i class="fa fa-twitter w3-hover-opacity icons"></i></a>  
-             <a href="https://www.linkedin.com/in/nitesh-kumar-s/"><i class="fa fa-linkedin w3-hover-opacity icons"></i></a>  
-             </div>
-              </span>
-             </div>
-            
-          </div>
-
-        </div>
-        </div>
-
-      </div>
-      <div class="service" id="service">
-         <h2 class="title"> __Service</h2>
-
-         <div class="card">
-           <div class="card-list">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRlY2hub2xvZ3klMjAxNjIwKjkwMHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60k" alt="Anastase Maragos"/>
-              </div>
-              <div class="card-text"> 
-                <h4>Android App</h4>
-                <p>$20/Month</p>
-                <a href="#join">
-                  <button class="w3-btn w3-red w3-margin-top w3-round" style="width:100%">Join</button>
-                </a>
-
-              </div>
-           </div>
-           <div class="card-list">
-            <div class="card-image">
-              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Sergio Pedemonte"/>
+            <div class="about-text">
+                <h3>Welcome to TechAssist</h3>
+                <p>TechAssist is your trusted partner in crafting digital experiences that redefine the way businesses operate. With expertise spanning web development, app development, and cutting-edge technologies, we bring your vision to life through clean and scalable code.</p>
+                <p>From ideation to deployment, we ensure that each project is handled with precision, dedication, and a commitment to exceeding expectations. Let's take your business to the next level.</p>
             </div>
-            <div class="card-text"> 
-              <h4>Website</h4>
-              <p>$10/Month</p>
-              <a href="#join">
-                <button class="w3-btn w3-red w3-margin-top w3-round" style="width:100%">Join</button>
-              </a>
+            <div>
+                <h3>Our Values</h3>
+                <ul>
+                    <li>Innovation</li>
+                    <li>Quality</li>
+                    <li>Reliability</li>
+                    <li>Customer Satisfaction</li>
+                </ul>
             </div>
+        </div>
+    </section>
 
-           </div>
-           <div class="card-list"><div class="card-image">
-            <img src="https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt=""Spencer Davis
-            />
-          </div>
-          <div class="card-text"> 
-            <h4>Ios App</h4>
-            <p>$40/Month</p>
-            <a href="#join">
-              <button class="w3-btn w3-red w3-margin-top w3-round" style="width:100%">Join</button>
-            </a>
+    <!-- Services Section -->
+    <section id="service" class="service">
+        <h2 class="title">Our Services</h2>
+        <div class="card">
+            <div class="card-list">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=500&q=60" alt="Android App Development">
+                </div>
+                <div class="card-text">
+                    <h4>Android App Development</h4>
+                    <p>Build scalable and user-friendly Android apps with us. Starting at $20/month.</p>
+                    <a href="#join">
+                        <button class="w3-btn w3-red w3-margin-top w3-round" style="width:100%">Join</button>
+                    </a>
+                </div>
+            </div>
+            <div class="card-list">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=60" alt="Web Development">
+                </div>
+                <div class="card-text">
+                    <h4>Web Development</h4>
+                    <p>Get a modern, responsive website designed. Starting at $10/month.</p>
+                    <a href="#join">
+                        <button class="w3-btn w3-red w3-margin-top w3-round" style="width:100%">Join</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          </div>
-
-           </div>
-         </div>
-      </div>
-
-      <div class="testimony" id="testimony">
-        <h2 class="title"> __ What They say about us</h2>
-
+    <!-- Testimonial Section -->
+    <section id="testimony" class="testimony">
+        <h2 class="title">Testimonials</h2>
         <div class="testimony-main">
-                 <div class="testimony-image">
-                   <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Karsten Winegeart"/>
-                 </div>
-                 <div class="testimony-text">
-                   <h3>Yash</h3>
-                   <p style="font-style: italic;">
-                    "TechAssist exceeded my expectations with their IT service. From seamless integration to top-notch security, they delivered beyond words. A game-changer for our business."
-                   </p>
-
-                 </div>
-        </div>
-        <div class="testimony-main">
-          <div class="testimony-image">
-            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Hayley Kim Design"/>
-          </div>
-          <div class="testimony-text">
-            <h3>Abhishek</h3>
-            <p style="font-style: italic;">
-            "Impressive doesn't even begin to describe TechAssist's expertise. Their IT solutions streamlined our operations and boosted productivity. Partnering with them was a game-changing decision."
-            </p>
-
-          </div>
- </div>
- <div class="testimony-main">
-  <div class="testimony-image">
-    <img src="https://images.unsplash.com/photo-1600087626014-e652e18bbff2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="Scott Webb"/>
-  </div>
-  <div class="testimony-text">
-    <h3>Rahul</h3>
-    <p style="font-style: italic;">
-    "TechAssist's IT services are a true game-changer. Their team's commitment to quality and efficiency is commendable. Our systems have never been this optimized, thanks to their exceptional solutions."
-    </p>
-
-  </div>
-</div>
-
-
-
-      </div>
-      <div class="contact" id="join">
-    <h2 class="title">Join Us</h2>
-    <div class="contact-main">
-        <div class="contact-form">
-            <form action="https://getform.io/f/akkglvka" method="POST">
-                <div class="form-group">
-                    <label for="first-name">First Name*</label>
-                    <input id="first-name" class="input" type="text" name="first-name" placeholder="First Name" required>
+            <div>
+                <h4>John Doe</h4>
+                <div class="testimony-image">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe">
                 </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name*</label>
-                    <input id="last-name" class="input" type="text" name="last-name" placeholder="Last Name" required>
+                <p>"TechAssist transformed our business with an intuitive web solution."</p>
+            </div>
+            <div>
+                <h4>Jane Smith</h4>
+                <div class="testimony-image">
+                    <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Jane Smith">
                 </div>
-                <div class="form-group">
-                    <label for="email">Email*</label>
-                    <input id="email" class="input" type="email" name="email" placeholder="Email" required>
+                <p>"Our mobile app was developed on time and within budget. Highly recommend!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="title">Get in Touch</h2>
+        <div class="contact-main">
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="/submit">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="input" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit</button>
+                </form>
+            </div>
+            <div class="contact-address">
+                <h3>Our Office</h3>
+                <p>123 TechAssist Ave, Suite 456</p>
+                <p>City, Country</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Email: info@techassist.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>About Us</h4>
+                <p>TechAssist is committed to delivering exceptional digital services for businesses worldwide.</p>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <p>Android App Development, Web Development, Consulting</p>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message*</label>
-                    <textarea id="message" class="input" name="message" placeholder="Write your message..." minlength="100" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send</button>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-
-
-
-  
-          
-    
-         <div class="contact-image">
-            <img src="https://media.istockphoto.com/id/1200075866/photo/first-bump-between-colleagues-at-work-everyday-work-in-the-office.jpg?s=612x612&w=0&k=20&c=frWoC4STOZgaxBPz3g4EAuYZqTH67SfT-OevM8zaRQc=" alt=""Bruce mars/>
-  
-          </div>
-        </div>
-      </div>
-      <div class="contact-address" id="contact">
-        <h2 class="title"> __ GET IN TOUCH</h2>
-        <div class="contact-address-list">
-          <div class="contact-list">
-            <h4>location</h4>
-            <p>P-337,SECTOR 4, SUKANT NAGAR</p>
-            <p>BIDAINAGAR , SALTLAKE
-          </p>
-            <p>KOLKATA 700098</p>
-          
-          </div>
-          <div class="contact-list">
-             <h4>Opening Hour</h4>
-             <p>Monday- Saturday: 8am -9:30pm</p>
-             <p>Sunday:8am- 9pm</p>
-       
-          </div>
-          <div class="contact-list">
-            <h4>Say hello</h4>
-            <p> <i class="fa fa-phone " style="margin-right: 8px;font-size: 20px;"></i> 9341930826</p>
-            <p><i class="fa fa-envelope " style=" margin-right: 5px;font-size: 20px;"></i>niteshpkpc@gmail.com</p>
-             
-        </div>
-
-        </div>
-
-      </div>
-    
-    </main>
-    <div class="w3-padding w3-center" style="background: #FFF4A3;padding: 10px 0px !important; color:#282A35; ">
-      <div style="display: flex; justify-content: center;align-items: center; flex-wrap: wrap;">
-        <p style="margin: 10px !important ">This website was made by Nitesh </p>
-        <button class="w3-margin-top w3-btn w3-text-white  w3-round-xxlarge" style=" background-color:#282A35;padding: 8px 25px;  margin:0px  !important">Start now</button>
-      </div>
-  
-    </div>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-        } else { 
-          x.className = x.className.replace(" w3-show", "");
-        }
-      }
-    </script>
+    </footer>
 </body>
+
 </html>
